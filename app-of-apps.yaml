@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: 'https://github.com/achrefbenmbarek1/libraryManagementAppOfApps'
+    repoURL: 'git@github.com:achrefbenmbarek1/libraryManagementAppOfApps.git'
     targetRevision: main
     path: .
   syncPolicy:
