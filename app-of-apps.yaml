@@ -3,13 +3,15 @@ kind: Application
 metadata:
   name: app-of-apps
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: 'https://dev.azure.com/axefinance-DevOps/AXE%20RM/_git/apps-repo'
+    repoURL: 'https://github.com/achrefbenmbarek1/libraryManagementAppOfApps'
     targetRevision: main
     path: .
   syncPolicy:
