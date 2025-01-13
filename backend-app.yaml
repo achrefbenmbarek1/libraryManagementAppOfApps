@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: 'git@github.com:achrefbenmbarek1/back-bibliotheque.git'
+    repoURL: 'git@github.com:achrefbenmbarek1/libraryManagementBackConfig.git'
     targetRevision: main
     path: ./
   syncPolicy:
