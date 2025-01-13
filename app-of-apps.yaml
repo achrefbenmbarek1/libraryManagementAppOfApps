@@ -4,7 +4,7 @@ metadata:
   name: app-of-apps
   namespace: argocd
   finalizers:
-    - resources-finalizer.argocd.argoproj.io
+    - resources-finalizers.argocd.argoproj.io
 spec:
   destination:
     namespace: argocd
