@@ -30,4 +30,5 @@ spec:
       selfHeal: true # Automatically apply changes detected in the Git repository
     syncOptions:
       - CreateNamespace=true
+      - SkipDryRunOnMissingResource=true
 
