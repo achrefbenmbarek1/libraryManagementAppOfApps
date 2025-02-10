@@ -20,8 +20,8 @@ spec:
   source:
     repoURL: 'git@github.com:achrefbenmbarek1/libraryManagementBackConfig.git'
     targetRevision: main
-    path: ./backapp/overlays/prod
-    kustomize: {}
+    path: ./back-app/overlays/prod
+    # kustomize: {}
     # directory:
     #   recurse: true
   syncPolicy:
