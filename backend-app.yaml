@@ -6,8 +6,8 @@ metadata:
     argocd-image-updater.argoproj.io/image-list: achrefbenmbarek123159/arm
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/ssh-private-key
     argocd-image-updater.argoproj.io/git-branch: main
-    # argocd-image-updater.argoproj.io/myalias.allow-tags: regexp:^backend-[0-9]+\.[0-9]+\.[0-9]+$
-    # argocd-image-updater.argoproj.io/myalias.update-strategy: semver
+    argocd-image-updater.argoproj.io/myalias.allow-tags: regexp:^backend-[0-9]+\.[0-9]+\.[0-9]+$
+    argocd-image-updater.argoproj.io/myalias.update-strategy: semver
 
   namespace: argocd
   finalizers:
@@ -20,9 +20,10 @@ spec:
   source:
     repoURL: 'git@github.com:achrefbenmbarek1/libraryManagementBackConfig.git'
     targetRevision: main
-    path: ./
-    directory:
-      recurse: true
+    path: ./backapp/overlays/prod
+    kustomize: {}
+    # directory:
+    #   recurse: true
   syncPolicy:
     automated:
       prune: true  # Remove resources that are no longer defined in the Git repository
