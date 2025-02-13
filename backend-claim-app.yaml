@@ -9,6 +9,8 @@ metadata:
     argocd-image-updater.argoproj.io/myalias.allow-tags: regexp:^backend-[0-9]+\.[0-9]+\.[0-9]+$
     argocd-image-updater.argoproj.io/myalias.update-strategy: semver
     argocd-image-updater.argoproj.io/myalias.kustomize.path: spec.image
+    argocd-image-updater.argoproj.io/myalias.kustomize.image-name: achrefbenmbarek123159/arm
+    argocd-image-updater.argoproj.io/myalias.force-update: "true"
 
   namespace: argocd
   finalizers:
