@@ -17,6 +17,9 @@ spec:
     namespace: argocd
     server: https://kubernetes.default.svc
   project: default
+  ignoreDifferences:
+  - group: "example.org"
+    kind: BackendApplication
   source:
     repoURL: 'git@github.com:achrefbenmbarek1/libraryManagementBackConfig.git'
     targetRevision: main
