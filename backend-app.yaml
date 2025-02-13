@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: back-library-app
-  annotations:
-    argocd-image-updater.argoproj.io/image-list: achrefbenmbarek123159/arm
-    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/ssh-private-key
-    argocd-image-updater.argoproj.io/git-branch: main
-    argocd-image-updater.argoproj.io/myalias.allow-tags: regexp:^backend-[0-9]+\.[0-9]+\.[0-9]+$
-    argocd-image-updater.argoproj.io/myalias.update-strategy: semver
+  # annotations:
+  #   argocd-image-updater.argoproj.io/image-list: achrefbenmbarek123159/arm
+  #   argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/ssh-private-key
+  #   argocd-image-updater.argoproj.io/git-branch: main
+  #   argocd-image-updater.argoproj.io/myalias.allow-tags: regexp:^backend-[0-9]+\.[0-9]+\.[0-9]+$
+  #   argocd-image-updater.argoproj.io/myalias.update-strategy: semver
 
   namespace: argocd
   finalizers:
