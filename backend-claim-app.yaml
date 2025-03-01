@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: back-library-claim-app
   annotations:
-    argocd-image-updater.argoproj.io/image-list: myalias=achrefbenmbarek123159/arm
+    argocd-image-updater.argoproj.io/image-list: myalias=achrefbenmbarek123159/arm:0.x.x
     # argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/ssh-private-key
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/new-ssh-secret
     argocd-image-updater.argoproj.io/git-branch: main
