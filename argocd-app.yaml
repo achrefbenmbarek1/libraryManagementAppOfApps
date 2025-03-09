@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-app
+  namespace: argocd
+  finalizers:
+    - resources-finalizers.argocd.argoproj.io
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
+  ignoreDifferences:
+  - group: "example.org"
+    kind: BackendApplication
+  source:
+    repoURL: 'git@github.com:achrefbenmbarek1/argocdCrossplaneResources.git'
+    targetRevision: main
+    path: ./
+    # kustomize: {}
+    # directory:
+    #   recurse: true
+  syncPolicy:
+    automated:
+      prune: false  # Remove resources that are no longer defined in the Git repository
+      selfHeal: true # Automatically apply changes detected in the Git repository
+    syncOptions:
+      - CreateNamespace=true
+      # - SkipDryRunOnMissingResource=true
+
